@@ -2,6 +2,7 @@
 async function checkText() {
     const text = document.getElementById("textInput").value.trim();
     const resultBox = document.getElementById("resultBox");
+    const BASE_URL = window.location.origin;
 
     if (!text) {
         alert("Enter text first!");
@@ -11,7 +12,7 @@ async function checkText() {
     resultBox.innerHTML = "⏳ Checking text...";
 
     try {
-        const res = await fetch("http://localhost:5000/api/check/text", {
+        const res = await fetch(`${BASE_URL}/api/check/text`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -45,7 +46,7 @@ async function checkImage() {
     resultBox.innerHTML = "⏳ Checking image...";
 
     try {
-        const res = await fetch("http://localhost:5000/api/check/image", {
+        const res = await fetch(`${BASE_URL}/api/check/image`, {
             method: "POST"
         });
 
