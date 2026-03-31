@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Integrity Checker</title>
+    <link rel="stylesheet" href="checker.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🔍 Integrity Checker</h1>
+
+    <div class="card">
+
+        <h2>Check Assignment</h2>
+
+        <!-- TEXT -->
+        <textarea id="textInput" placeholder="Paste your assignment here..."></textarea>
+
+        <!-- IMAGE -->
+        <input type="file" id="imageInput" accept="image/*">
+
+        <!-- BUTTONS -->
+        <div class="btn-group">
+            <button onclick="checkText()">📝 Check Text</button>
+            <button onclick="checkImage()">🖼️ Check Image</button>
+        </div>
+
+        <!-- RESULT -->
+        <div id="resultBox" class="result-box">
+            Result will appear here...
+        </div>
+
+    </div>
+
+</div>
+
+<script src="checker.js"></script>
+</body>
+</html>

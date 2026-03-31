@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduGuard AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔝 NAVBAR -->
+<nav class="navbar">
+    <div class="logo">EduGuard <span>AI</span></div>
+    <ul>
+        <li>Home</li>
+        <li onclick="scrollToSection('features')">Features</li>
+        <li onclick="scrollToSection('about')">About</li>
+    </ul>
+</nav>
+
+<!-- 🚀 HERO -->
+<section class="hero">
+    <h1>Smart Academic<br>Integrity System</h1>
+
+    <p>
+        Detect AI-generated assignments, verify originality,  
+        and get instant academic insights with EduGuard AI.
+    </p>
+
+    <div class="buttons">
+        <button class="primary" onclick="goToChat()">🤖 Assistant</button>
+        <button class="secondary" onclick="goToChecker()">🔍 Integrity</button>
+    </div>
+</section>
+
+<!-- ⭐ FEATURES -->
+<section id="features" class="features">
+    <h2>Powerful Features</h2>
+
+    <div class="feature-cards">
+
+        <div class="card">
+            <h3>🤖 AI Assistant</h3>
+            <p>Get instant academic help, explanations, and smart answers powered by AI.</p>
+        </div>
+
+        <div class="card">
+            <h3>📝 Text Integrity Check</h3>
+            <p>Analyze assignments and detect AI-generated or copied content with smart scoring.</p>
+        </div>
+
+        <div class="card">
+            <h3>🖼️ Image Analysis</h3>
+            <p>Upload handwritten or printed work and verify authenticity using AI image detection.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Fast & Accurate</h3>
+            <p>Get results in seconds with reliable AI-powered analysis and insights.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- 👤 ABOUT -->
+<section id="about" class="about">
+    <h2>About EduGuard AI</h2>
+
+    <p>
+        EduGuard AI is a smart academic integrity platform designed to help students, teachers, 
+        and institutions maintain honesty in education. With advanced AI capabilities, it detects 
+        AI-generated content, checks originality, and provides intelligent assistance for learning.
+    </p>
+
+    <p>
+        Our mission is to build a future where technology supports education without compromising 
+        integrity. EduGuard AI empowers users with transparency, trust, and smarter learning tools.
+    </p>
+</section>
+
+<!-- ⚙️ SCRIPT -->
+<script>
+function goToChat() {
+    window.location.href = "chat.html";
+}
+
+function goToChecker() {
+    window.location.href = "checker.html";
+}
+
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+<!-- 🔻 FOOTER -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <h2>EduGuard AI</h2>
+        <p>Ensuring Academic Integrity in the Age of AI</p>
+
+        <div class="footer-links">
+            <span onclick="scrollToSection('features')">Features</span>
+            <span onclick="scrollToSection('about')">About</span>
+            <span onclick="goToChat()">Assistant</span>
+            <span onclick="goToChecker()">Integrity Checker</span>
+        </div>
+
+        <p class="copyright">
+            © 2026 EduGuard AI | All Rights Reserved
+        </p>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>

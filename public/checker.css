@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: radial-gradient(circle at top, #0f172a, #020617);
+    color: white;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Card */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    margin: auto;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,255,255,0.1);
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 12px;
+    margin: 15px 0;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+textarea:focus {
+    border: 1px solid #38bdf8;
+    box-shadow: 0 0 10px rgba(56,189,248,0.5);
+}
+
+/* File input */
+input[type="file"] {
+    margin: 10px 0;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    cursor: pointer;
+    width: 48%;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(56,189,248,0.5);
+}
+
+/* Result Box */
+.result-box {
+    margin-top: 20px;
+    min-height: 100px;
+}
+
+/* RESULT CARD */
+.result-card {
+    background: rgba(255,255,255,0.06);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+/* TITLE */
+.result-card h3 {
+    margin-bottom: 10px;
+}
+
+/* PROGRESS BG */
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+/* TEXT */
+.result-card p {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Loading */
+.loading {
+    font-style: italic;
+    opacity: 0.7;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduGuard AI Chat</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- 📂 SIDEBAR -->
+    <div class="sidebar">
+        <h2>EduGuard AI</h2>
+        <button onclick="newChat()">+ New Chat</button>
+
+        <div class="history">
+            <p>History</p>
+            <ul id="chatHistory"></ul>
+        </div>
+    </div>
+
+    <!-- 💬 MAIN CHAT -->
+    <div class="chat-section">
+
+        <!-- HEADER -->
+        <div class="header">
+            🤖 EduGuard Assistant
+        </div>
+
+        <!-- CHAT BOX -->
+        <div id="chatBox" class="chat-box"></div>
+
+        <!-- INPUT -->
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Message EduGuard AI..." onkeypress="handleKey(event)">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="chat.js"></script>
+</body>
+</html>
