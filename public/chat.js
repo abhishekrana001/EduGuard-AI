@@ -23,7 +23,7 @@ async function sendMessage() {
 
     if (!chatBox || !chatContainer) return;
 
-    // ❌ Remove welcome
+    // ❌ remove welcome
     const welcome = document.querySelector(".welcome");
     if (welcome) welcome.remove();
 
@@ -33,7 +33,7 @@ async function sendMessage() {
     userMsg.innerText = message;
     chatBox.appendChild(userMsg);
 
-    // 💾 Save history
+    // 💾 SAVE HISTORY
     saveToHistory(message);
 
     input.value = "";
@@ -87,7 +87,7 @@ async function sendMessage() {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
 
-// ⌨️ ENTER KEY SUPPORT
+// ⌨️ ENTER KEY
 function handleKey(event) {
     if (event.key === "Enter" && !event.shiftKey) {
         event.preventDefault();
@@ -107,11 +107,31 @@ function newChat() {
     `;
 }
 
-// 📂 SIDEBAR TOGGLE (MOBILE)
+// 📂 SIDEBAR TOGGLE
 function toggleSidebar() {
     const sidebar = document.querySelector(".sidebar");
     if (sidebar) sidebar.classList.toggle("active");
 }
+
+// ❌ CLOSE SIDEBAR ON OUTSIDE CLICK
+document.addEventListener("click", function (e) {
+    const sidebar = document.querySelector(".sidebar");
+    const menuBtn = document.querySelector(".menu-btn");
+
+    if (!sidebar || !menuBtn) return;
+
+    if (!sidebar.contains(e.target) && !menuBtn.contains(e.target)) {
+        sidebar.classList.remove("active");
+    }
+});
+
+// ⌨️ ESC CLOSE SIDEBAR
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+        const sidebar = document.querySelector(".sidebar");
+        if (sidebar) sidebar.classList.remove("active");
+    }
+});
 
 // 💾 SAVE HISTORY
 function saveToHistory(message) {
@@ -139,6 +159,9 @@ function renderHistory() {
 
         li.onclick = () => {
             document.getElementById("userInput").value = msg;
+
+            // 🔥 close sidebar on mobile
+            document.querySelector(".sidebar")?.classList.remove("active");
         };
 
         historyList.appendChild(li);

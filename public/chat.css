@@ -148,16 +148,25 @@ body {
 
 /* INPUT AREA (CHATGPT STYLE 🔥) */
 .input-area {
-    position: sticky;
+    position: fixed;
     bottom: 0;
+
+    /* 🔥 Sidebar ke baad start */
+    left: 260px; /* sidebar width */
+    
+    width: calc(100% - 260px); /* remaining space */
 
     display: flex;
     justify-content: center;
 
-    padding: 15px;
+    padding: 10px;
+
     background: #0f172a;
     border-top: 1px solid rgba(255,255,255,0.08);
+
+    z-index: 1000;
 }
+
 
 /* INPUT CONTAINER */
 .input-box {
